@@ -10,48 +10,88 @@ const Search = memo(({ onFilterIngredients, teamsDB, sortedByName, sortedByScore
     const inputFilterRef = useRef()
     const inputFilterScoreRef = useRef()
 
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         if (userInputFilter !== '' && userInputFilter === inputFilterRef.current.value) {
+
+    //             if (sortedByName.length !== 0) {
+    //                 const filtered = sortedByName.filter(team => {
+    //                     return team.team_name.includes(userInputFilter)
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             } else if (sortedByScore.length !== 0) {
+    //                 const filtered = sortedByScore.filter(team => {
+    //                     return team.team_name.includes(userInputFilter)
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             } else {
+    //                 const filtered = teamsDB.filter(team => {
+    //                     return team.team_name.includes(userInputFilter)
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             }
+
+    //         } else {
+    //             if (sortedByName.length !== 0) {
+    //                 const filtered = sortedByName.filter(team => {
+    //                     return team.score.toString() === userInputScoreFilter
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             } else if (sortedByScore.length !== 0) {
+    //                 const filtered = sortedByScore.filter(team => {
+    //                     return team.score.toString() === userInputScoreFilter
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             } else {
+    //                 const filtered = teamsDB.filter(team => {
+    //                     return team.score.toString() === userInputScoreFilter
+    //                 })
+    //                 onFilterIngredients(filtered)
+    //             }
+    //         }
+    //     }, 1000)
+    //     return () => {
+    //         clearTimeout(timer)
+    //     }
+    // }, [userInputFilter, onFilterIngredients])
+
     useEffect(() => {
-        const timer = setTimeout(() => {
-            if (userInputFilter !== '' && userInputFilter === inputFilterRef.current.value) {
+        if (userInputFilter !== '' && userInputFilter === inputFilterRef.current.value) {
 
-                if (sortedByName.length !== 0) {
-                    const filtered = sortedByName.filter(team => {
-                        return team.team_name.includes(userInputFilter)
-                    })
-                    onFilterIngredients(filtered)
-                } else if (sortedByScore.length !== 0) {
-                    const filtered = sortedByScore.filter(team => {
-                        return team.team_name.includes(userInputFilter)
-                    })
-                    onFilterIngredients(filtered)
-                } else {
-                    const filtered = teamsDB.filter(team => {
-                        return team.team_name.includes(userInputFilter)
-                    })
-                    onFilterIngredients(filtered)
-                }
-
+            if (sortedByName.length !== 0) {
+                const filtered = sortedByName.filter(team => {
+                    return team.team_name.includes(userInputFilter)
+                })
+                onFilterIngredients(filtered)
+            } else if (sortedByScore.length !== 0) {
+                const filtered = sortedByScore.filter(team => {
+                    return team.team_name.includes(userInputFilter)
+                })
+                onFilterIngredients(filtered)
             } else {
-                if (sortedByName.length !== 0) {
-                    const filtered = sortedByName.filter(team => {
-                        return team.score.toString() === userInputScoreFilter
-                    })
-                    onFilterIngredients(filtered)
-                } else if (sortedByScore.length !== 0) {
-                    const filtered = sortedByScore.filter(team => {
-                        return team.score.toString() === userInputScoreFilter
-                    })
-                    onFilterIngredients(filtered)
-                } else {
-                    const filtered = teamsDB.filter(team => {
-                        return team.score.toString() === userInputScoreFilter
-                    })
-                    onFilterIngredients(filtered)
-                }
+                const filtered = teamsDB.filter(team => {
+                    return team.team_name.includes(userInputFilter)
+                })
+                onFilterIngredients(filtered)
             }
-        }, 1000)
-        return () => {
-            clearTimeout(timer)
+
+        } else {
+            if (sortedByName.length !== 0) {
+                const filtered = sortedByName.filter(team => {
+                    return team.score.toString() === userInputScoreFilter
+                })
+                onFilterIngredients(filtered)
+            } else if (sortedByScore.length !== 0) {
+                const filtered = sortedByScore.filter(team => {
+                    return team.score.toString() === userInputScoreFilter
+                })
+                onFilterIngredients(filtered)
+            } else {
+                const filtered = teamsDB.filter(team => {
+                    return team.score.toString() === userInputScoreFilter
+                })
+                onFilterIngredients(filtered)
+            }
         }
     }, [userInputFilter, onFilterIngredients])
 

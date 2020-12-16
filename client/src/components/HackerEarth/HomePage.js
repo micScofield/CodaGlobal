@@ -106,7 +106,7 @@ const HomePage = ({ addTeam, loading, alertMsg, alertType, teamsDB, loadTeams, r
 
     useEffect(() => {
         loadTeams()
-    }, [loadTeams, sortedByName])
+    }, [sortedByName])
 
     let newTeam = ''
 
@@ -173,7 +173,7 @@ const HomePage = ({ addTeam, loading, alertMsg, alertType, teamsDB, loadTeams, r
                 <span><button className='btn btn-primary' onClick={addTeamHandler}>Add Team</button></span>
                 <span><button className='btn btn-primary' onClick={sortByScoreHandler}>Sort By Score</button></span>
                 <span><button className='btn btn-primary' onClick={sortByTeamNameHandler}>Sort By Team Name</button></span><br />
-                <Search onFilterIngredients={searchHandler} />
+                {/* <Search onFilterIngredients={searchHandler} /> */}
                 {input}
                 <table className="table">
                     <thead>
