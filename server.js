@@ -27,17 +27,17 @@ app.use('/api/teams', require('./routes/api/teams'))
 app.use('/api/results', require('./routes/api/results'))
 
 
-app.use((req, res, next) => {
-    return new HttpError('Couldnt find any route you provided !', 404)
-})
+// app.use((req, res, next) => {
+//     return new HttpError('Couldnt find any route you provided !', 404)
+// })
 
-app.use((error, req, res, next) => {
-    if (res.headerSent) {
-        return next(error);
-    }
-    res.status(error.code || 500)
-    res.json({ message: error.message || 'An unknown error occurred!' });
-})
+// app.use((error, req, res, next) => {
+//     if (res.headerSent) {
+//         return next(error);
+//     }
+//     res.status(error.code || 500)
+//     res.json({ message: error.message || 'An unknown error occurred!' });
+// })
 
 if (process.env.NODE_ENV==='production') {
     app.use(express.static('/client/build'))
