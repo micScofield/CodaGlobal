@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
+import { createStore, compose, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
 //reducers
-import AlertReducer from './store/reducers/alert'
-import AuthReducer from './store/reducers/auth'
-import ProfileReducer from './store/reducers/profile'
+//import AlertReducer from './store/reducers/alert'
+import TeamReducer from './store/reducers/team'
 
 import App from './App';
 
 const rootReducer = combineReducers({
-  alert: AlertReducer,
-  auth: AuthReducer,
-  profile: ProfileReducer
+  team: TeamReducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

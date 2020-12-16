@@ -13,7 +13,6 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -22,10 +21,6 @@ body {
 
 .primary-color {
   color: var(--primary-color);
-}
-
-img {
-  width: 100%;
 }
 
 ul {
@@ -42,22 +37,10 @@ a {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-/* text-size classes */
-.x-large {
-  font-size: 3.7rem;
-}
-.large {
-  font-size: 2rem;
-}
-.medium {
-  font-size: 1.5rem;
-}
-
-/* buttons */
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -117,121 +100,3 @@ a {
 .table th {
   background: var(--light-color);
 }
-
-/* profile display */
-
-/* Card */
-.card {
-  width: 100%;
-  margin-top: 2rem;
-  background-color: var(--light-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 6px;
-  padding: 1rem;
-  overflow: hidden;
-}
-
-/* Developers page mini profiles styles */
-.profile {
-  float: left;
-  margin-left: 5rem;
-}
-
-.avatar img{
-  float: left;
-  border-radius: 50%;
-  height: 12rem;
-  width: 12rem;
-}
-
-.profileSkills {
-  float: right;
-  margin-right: 5rem;
-}
-
-/* Detailed-profile styles */
-.profile-detail {
-  margin-top: 10px;
-  background-color: var(--primary-color);
-  height: 500px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 1rem;
-  color: white;
-}
-
-.profile-detail img{
-  margin-top: 25px;
-  border-radius: 50%;
-  height: 12rem;
-  width: 12rem;
-}
-
-
-
-/* Mobile Styles */
-@media (max-width: 700px) {
-  .hide-sm {
-    display: none;
-  }
-
-  .container {
-    margin-top: 8rem;
-  }
-}
-
-/* navbar */
-/* .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0.7rem 2rem;
-  border-bottom: 1px solid var(--primary-color);
-  opacity: 0.8;
-  background-color: var(--dark-color);
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar a {
-  margin: 0 0.25rem;
-  color: #fff;
-  padding: 0.5rem;
-}
-
-.navbar a:hover {
-  color: var(--primary-color)
-} */
-
-/* landing */
-/* .landing {
-  position: relative;
-  background: url('./img/showcase.jpg') no-repeat center center/cover;
-  height: 100vh;
-}
-
-.landingInner {
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.landingOverlay {
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  width: 100%;
-} */
